@@ -1,0 +1,387 @@
+
+/* common style or utilities */
+
+/* reset default margin padding */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+#heading #logo
+{
+    position: absolute;
+    left: 8%;
+    top: 30px;
+    font-size: 30px;
+    z-index: 997;
+    font-weight: bold;
+    color: #165397;
+}
+#navbar
+{
+    height: 90px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fdfefe;
+    display: grid;
+    place-items: center;
+}
+#navbar ul
+{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+#navbar ul li
+{
+    font-size: 20px;
+    margin: 0 45px;
+}
+#navbar ul li a
+{
+    text-decoration: none;
+    color: #000;
+}
+#navbar ul li a:hover
+{
+    color: #165397;
+}
+/* login button */
+#navbar ul #login
+{
+    height: 50px;
+    width: 120px;
+    position: absolute;
+    top: 20px;
+    right: 7%;
+    display: grid;
+    place-items: center;
+    background: #165397;
+    border-radius: 10px 20px;
+}
+#navbar ul #login a
+{
+    color: #e9e9eb;
+}
+#navbar ul #login:hover
+{
+    background: #000;
+}
+
+header {
+  width: 100vw;
+
+  margin: 10;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+header h1 {
+  margin: 5;
+  color: #ffffff;
+  font-size: 64px;
+  line-height: 80px;
+  height: 230px;
+  width: 500px;
+}
+header img {
+  height: 26rem;
+  width: 34.375rem;
+}
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  font-weight: 700px;
+  margin-top: 14px;
+  margin-bottom: 10px;
+}
+p {
+  font-size: 14px;
+  line-height: 26px;
+  margin-top: 0;
+}
+/* top part */
+
+.top-container {
+  padding-top: 130px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* player Section */
+.players-container {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+.blog {
+  height: 426;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 10px 40px grey;
+  padding: 15px;
+  height: 447px;
+}
+
+.blog img {
+  height: 256px;
+  width: 300px;
+}
+
+/* News highlight scetion */
+
+.highlight-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 165px;
+}
+.highlight-thumbnil img {
+  width: 567px;
+  height: 427px;
+}
+.news-title h2 {
+  font-size: 48px;
+  padding-right: 20px;
+  margin: 0;
+  line-height: 80px;
+  height: 230px;
+  width: 500px;
+}
+
+/* buttom section */
+.buttom {
+}
+.buttom-section {
+  background-color: #eeeeee;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+}
+.logo img {
+}
+
+/* Style social-media logo */
+.social-media {
+  width: 822px;
+  height: 203px;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .icon {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 20px;
+  height: 20px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 2px 6px 10px 3px #000000;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px #000000;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px #000000;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: #e1306c;
+  color: #ffffff;
+}
+
+.wrapper .telegram:hover,
+.wrapper .telegram:hover .tooltip,
+.wrapper .telegram:hover .tooltip::before {
+  background-color: #0088cc;
+  color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background-color: #de463b;
+  color: #ffffff;
+}
+
+.copyright {
+  text-align: center;
+  color: #424642;
+  font-size: 0.85rem;
+  padding: 20px 0;
+}
+
+/* button stayle */
+.btn {
+  text-decoration: none;
+  background: #3498db;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 10px 20px 10px 20px;
+}
+.btn:hover {
+  background: #3cb0fd;
+}
+
+/* media queries */
+
+/* Mobile Devices */
+@media only screen and (max-width: 480px) {
+  header {
+    width: 360px;
+    height: 695px;
+    padding-left: 16px;
+  }
+  .title {
+  }
+  .top-container {
+    flex-direction: column;
+
+    justify-content: space-evenly;
+  }
+  header h1 {
+    width: 278px;
+    height: 138px;
+    font-size: 36px;
+    line-height: 50px;
+    text-align: left;
+  }
+
+  header img {
+    width: 20.5rem;
+    height: 16.25rem;
+  }
+  .btn {
+    text-align: center;
+  }
+  .blog-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .highlight-container {
+    flex-direction: column;
+
+    justify-content: space-evenly;
+  }
+  .highlight-thumbnil img {
+    width: 300px;
+    height: 250px;
+  }
+  .news-title {
+    width: 300px;
+    height: 200px;
+  }
+  .news-title h2 {
+    width: 290px;
+    height: 100px;
+
+    text-align: left;
+    font-size: 30px;
+    margin: 0;
+    line-height: 40px;
+  }
+  .buttom-section {
+    background-color: #eeeeee;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 20vh;
+  }
+  .logo img {
+    height: 100px;
+    width: 300px;
+  }
+}
+/* Tab  */
+/* @media only screen and (min-width: 481px) and (max-width: 765px) {
+
+  }
+
+
+
+
+/* laptop */
+/* @media only screen and (min-width: 749px) and (max-width: 1024px) {
+
+}
+/* Desktop */
+/* @media only screen and (min-width: 1025px) {
+  #box-4 {
+ 
+  }
+} */
